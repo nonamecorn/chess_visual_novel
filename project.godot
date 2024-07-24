@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 autoload="*res://other/autoload.tscn"
 ostmanager="*res://other/ostmanager.tscn"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Chess/plugin.cfg")
+
 [input]
 
 ui_left_mouse={
