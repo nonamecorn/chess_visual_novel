@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7g31ppx7tjqe"
+path="res://.godot/imported/ULTRAKILL Parry Sound Effect.mp3-2a191bafaf39f8b1dfa1eb017e8ba532.mp3str"
+
+[deps]
+
+source_file="res://snd/ULTRAKILL Parry Sound Effect.mp3"
+dest_files=["res://.godot/imported/ULTRAKILL Parry Sound Effect.mp3-2a191bafaf39f8b1dfa1eb017e8ba532.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

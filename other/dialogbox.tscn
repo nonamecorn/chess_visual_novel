@@ -1,0 +1,143 @@
+[gd_scene load_steps=7 format=3 uid="uid://bosi66ecuj1sn"]
+
+[ext_resource type="Script" path="res://other/dialogbox.gd" id="1_4eoo4"]
+[ext_resource type="Texture2D" uid="uid://dqe17hk8fqung" path="res://img/ui.png" id="2_atiyw"]
+[ext_resource type="Texture2D" uid="uid://chj0ubjuciyp5" path="res://img/bgart/background_placeholder.png" id="2_d2eix"]
+[ext_resource type="Texture2D" uid="uid://bwp5ya7v5rlc6" path="res://img/characters/character_placeholder.png" id="2_p1837"]
+[ext_resource type="FontFile" uid="uid://dewetsiqnf60o" path="res://other/PressStart2P-Regular.ttf" id="3_vxhtk"]
+[ext_resource type="Texture2D" uid="uid://dagl3jkqflf1u" path="res://img/uishish.png" id="4_k6rw8"]
+
+[node name="dbshechkka" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4eoo4")
+txt = NodePath("HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/RichTextLabel")
+cnm = NodePath("HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Label")
+chcs = NodePath("HBoxContainer/MarginContainer/CenterContainer/VBoxContainer")
+chcswin = NodePath("HBoxContainer/MarginContainer")
+ind = NodePath("HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer2/TextureRect")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -8.0
+offset_right = -2.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_d2eix")
+expand_mode = 5
+
+[node name="Texture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 474.0
+offset_top = 42.0
+offset_right = -71.0
+offset_bottom = -33.0
+texture = ExtResource("2_p1837")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -469.0
+offset_right = 400.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_atiyw")
+region_rect = Rect2(0, 0, 160, 164)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 15
+
+[node name="CenterContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="HBoxContainer/PanelContainer"]
+layout_mode = 2
+texture = ExtResource("2_atiyw")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 16
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(800, 220)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_vxhtk")
+theme_override_font_sizes/font_size = 32
+text = "Text"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("3_vxhtk")
+theme_override_font_sizes/normal_font_size = 16
+text = "MORE Text"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(33, 0)
+layout_mode = 2
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(33, 0)
+layout_mode = 2
+texture = ExtResource("4_k6rw8")
+stretch_mode = 2

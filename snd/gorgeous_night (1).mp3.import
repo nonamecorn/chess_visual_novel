@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2m42vx13a6h6"
+path="res://.godot/imported/gorgeous_night (1).mp3-4ed912e7cdcfd313e9250973650a1756.mp3str"
+
+[deps]
+
+source_file="res://snd/gorgeous_night (1).mp3"
+dest_files=["res://.godot/imported/gorgeous_night (1).mp3-4ed912e7cdcfd313e9250973650a1756.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,208 @@
+[gd_scene load_steps=5 format=3 uid="uid://xujwxqb61kx"]
+
+[ext_resource type="Texture2D" uid="uid://dqe17hk8fqung" path="res://img/ui.png" id="1_v5s0w"]
+[ext_resource type="Script" path="res://other/ingamemenu.gd" id="1_y0xn3"]
+[ext_resource type="FontFile" uid="uid://dewetsiqnf60o" path="res://other/PressStart2P-Regular.ttf" id="2_sh6eo"]
+[ext_resource type="AudioStream" uid="uid://wy3jjnkpc3ae" path="res://snd/blip.wav" id="4_41eh0"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y0xn3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.211765, 0.211765, 0.211765, 0.447059)
+
+[node name="select" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="select"]
+layout_mode = 2
+texture = ExtResource("1_v5s0w")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 16
+
+[node name="MarginContainer" type="MarginContainer" parent="select"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="select/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="save" type="Button" parent="select/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_sh6eo")
+theme_override_font_sizes/font_size = 32
+text = "save"
+
+[node name="continue" type="Button" parent="select/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_sh6eo")
+theme_override_font_sizes/font_size = 32
+text = "continue"
+
+[node name="save" type="MarginContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="save"]
+layout_mode = 2
+texture = ExtResource("1_v5s0w")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 16
+
+[node name="MarginContainer" type="MarginContainer" parent="save"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="save/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="back" type="Button" parent="save/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_sh6eo")
+text = "BACK"
+
+[node name="slot1" type="VBoxContainer" parent="save/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="save/MarginContainer/VBoxContainer/slot1"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_sh6eo")
+text = "Slot1"
+
+[node name="Label2" type="RichTextLabel" parent="save/MarginContainer/VBoxContainer/slot1"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_sh6eo")
+text = "		empty"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="save/MarginContainer/VBoxContainer/slot1"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="save/MarginContainer/VBoxContainer/slot1/HBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Button" type="Button" parent="save/MarginContainer/VBoxContainer/slot1/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_sh6eo")
+text = "save"
+
+[node name="slot2" type="VBoxContainer" parent="save/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="save/MarginContainer/VBoxContainer/slot2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_sh6eo")
+text = "Slot2"
+
+[node name="Label3" type="RichTextLabel" parent="save/MarginContainer/VBoxContainer/slot2"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_sh6eo")
+text = "you dont need it yet"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="save/MarginContainer/VBoxContainer/slot2"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="save/MarginContainer/VBoxContainer/slot2/HBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Button" type="Button" parent="save/MarginContainer/VBoxContainer/slot2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_sh6eo")
+text = "save"
+
+[node name="slot3" type="VBoxContainer" parent="save/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label3" type="Label" parent="save/MarginContainer/VBoxContainer/slot3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_sh6eo")
+text = "Slot3"
+
+[node name="Label2" type="RichTextLabel" parent="save/MarginContainer/VBoxContainer/slot3"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_sh6eo")
+text = "you dont need it too"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="save/MarginContainer/VBoxContainer/slot3"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="save/MarginContainer/VBoxContainer/slot3/HBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Button" type="Button" parent="save/MarginContainer/VBoxContainer/slot3/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_sh6eo")
+text = "save"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_41eh0")
+
+[connection signal="pressed" from="select/MarginContainer/VBoxContainer/save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="select/MarginContainer/VBoxContainer/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="save/MarginContainer/VBoxContainer/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="save/MarginContainer/VBoxContainer/slot1/HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

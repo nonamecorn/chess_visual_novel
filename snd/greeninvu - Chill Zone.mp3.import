@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://be6girwfveq5k"
+path="res://.godot/imported/greeninvu - Chill Zone.mp3-b59f487d0bb2d0fb30d8edce38d10a14.mp3str"
+
+[deps]
+
+source_file="res://snd/greeninvu - Chill Zone.mp3"
+dest_files=["res://.godot/imported/greeninvu - Chill Zone.mp3-b59f487d0bb2d0fb30d8edce38d10a14.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

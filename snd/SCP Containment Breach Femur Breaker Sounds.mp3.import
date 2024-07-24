@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://kth6chnmijuf"
+path="res://.godot/imported/SCP Containment Breach Femur Breaker Sounds.mp3-8f6083400d60a07650b12725f4d5b03e.mp3str"
+
+[deps]
+
+source_file="res://snd/SCP Containment Breach Femur Breaker Sounds.mp3"
+dest_files=["res://.godot/imported/SCP Containment Breach Femur Breaker Sounds.mp3-8f6083400d60a07650b12725f4d5b03e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
