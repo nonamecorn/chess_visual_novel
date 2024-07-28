@@ -23,13 +23,14 @@ offset_bottom = -37.0
 offset_top = -473.0
 offset_bottom = -4.0
 
-[node name="menu" parent="." instance=ExtResource("2_mp0fq")]
-visible = false
-layout_mode = 1
-
 [node name="Board" parent="." instance=ExtResource("3_jic2r")]
 layout_mode = 1
 offset_right = 0.0
 offset_bottom = 0.0
+
+[node name="menu" parent="." instance=ExtResource("2_mp0fq")]
+process_mode = 3
+visible = false
+layout_mode = 1
 
 [editable path="dbshechkka"]

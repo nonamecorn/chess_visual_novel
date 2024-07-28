@@ -25,9 +25,9 @@ signal finished_dialog
 
 var test_dialog = {
 	"0": {
-		"name": "Лодочник",
+		"name": "Плейсхолдер",
 		"texture": "character_placeholder.png",
-		"txt": "Ты поговорил с мужиком?",
+		"txt": "Привет?",
 		"options": [
 			{"text": "Да", "next": "1"},
 			{"text": "Нет", "next": "-1"},
@@ -36,9 +36,9 @@ var test_dialog = {
 		]
 	},
 	"1": {
-		"name": "Лодочник",
+		"name": "Плейсхолдер",
 		"texture": "character_placeholder_angy.png",
-		"txt": "Выступаем?",
+		"txt": "Е?",
 		"options": [
 			{"text": "Да", "next": "-1", "command": ["change_scene", ["res://scenes/theplaceday.tscn"]]},
 			{"text": "Нет", "next": "-1"}
