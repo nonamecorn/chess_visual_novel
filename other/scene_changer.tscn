@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://dinytxfsx2hul"]
+
+[ext_resource type="Script" uid="uid://dnt5ji1frwg7l" path="res://other/scene_changer.gd" id="1_t5yip"]
+
+[sub_resource type="Gradient" id="Gradient_rhfbe"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xnc2w"]
+gradient = SubResource("Gradient_rhfbe")
+width = 1152
+height = 648
+fill_from = Vector2(0.512077, 1)
+fill_to = Vector2(0.516908, 0)
+
+[sub_resource type="Animation" id="Animation_4njqx"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 100.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1qqk6"]
+_data = {
+&"fade_in": SubResource("Animation_4njqx")
+}
+
+[node name="scene_changer" type="TextureProgressBar"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 100.0
+fill_mode = 3
+texture_progress = SubResource("GradientTexture2D_xnc2w")
+script = ExtResource("1_t5yip")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1qqk6")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

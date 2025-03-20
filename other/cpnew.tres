@@ -1,6 +1,0 @@
-[gd_resource type="Resource" script_class="CommandProcessor" load_steps=2 format=3 uid="uid://1d0h3j7k3agj"]
-
-[ext_resource type="Script" path="res://other/cp.gd" id="1_np1el"]
-
-[resource]
-script = ExtResource("1_np1el")

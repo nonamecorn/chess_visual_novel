@@ -1,6 +1,4 @@
-extends Resource
-
-class_name CommandProcessor
+extends Node
 
 signal change_scene
 signal engage

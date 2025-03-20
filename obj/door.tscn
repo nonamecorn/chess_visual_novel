@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba1lkl05v314v"]
+
+[ext_resource type="Texture2D" uid="uid://mg3tglcmurvh" path="res://img/monochrome-transparent_packed.png" id="1_kml0p"]
+[ext_resource type="Script" uid="uid://ddw3o45tgv0r0" path="res://obj/door.gd" id="1_vtwor"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kml0p"]
+
+[node name="door" type="StaticBody2D"]
+script = ExtResource("1_vtwor")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kml0p")
+centered = false
+region_enabled = true
+region_rect = Rect2(48, 96, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_kml0p")

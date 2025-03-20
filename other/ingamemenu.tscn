@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://xujwxqb61kx"]
 
 [ext_resource type="Texture2D" uid="uid://dqe17hk8fqung" path="res://img/ui.png" id="1_v5s0w"]
-[ext_resource type="Script" path="res://other/ingamemenu.gd" id="1_y0xn3"]
+[ext_resource type="Script" uid="uid://bcw7vn41bws2f" path="res://other/ingamemenu.gd" id="1_y0xn3"]
 [ext_resource type="FontFile" uid="uid://dewetsiqnf60o" path="res://other/PressStart2P-Regular.ttf" id="2_sh6eo"]
 [ext_resource type="AudioStream" uid="uid://wy3jjnkpc3ae" path="res://snd/blip.wav" id="4_41eh0"]
 

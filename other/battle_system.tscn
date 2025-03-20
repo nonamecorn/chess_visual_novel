@@ -1,0 +1,144 @@
+[gd_scene load_steps=7 format=3 uid="uid://bal1y1cjny7n8"]
+
+[ext_resource type="Script" uid="uid://d0cpolfjnrbsg" path="res://other/battle_system.gd" id="1_7spd1"]
+[ext_resource type="Script" uid="uid://c62b1ou8qkcek" path="res://other/dialogbox.gd" id="2_ttkgs"]
+[ext_resource type="Texture2D" uid="uid://dqe17hk8fqung" path="res://img/ui.png" id="5_qr8ic"]
+[ext_resource type="Script" uid="uid://q186dbxfotc" path="res://other/command_processor.gd" id="6_0yhcs"]
+[ext_resource type="FontFile" uid="uid://dewetsiqnf60o" path="res://other/PressStart2P-Regular.ttf" id="6_y4gt4"]
+[ext_resource type="Texture2D" uid="uid://dagl3jkqflf1u" path="res://img/uishish.png" id="7_thhpf"]
+
+[node name="battle_system" type="Node2D"]
+script = ExtResource("1_7spd1")
+
+[node name="player_combatants" type="Node2D" parent="."]
+
+[node name="enemy_combatans" type="Node2D" parent="."]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="dbshechkka" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_ttkgs")
+txt = NodePath("HBoxContainer2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/RichTextLabel")
+cnm = NodePath("HBoxContainer2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Label")
+chcs = NodePath("HBoxContainer2/MarginContainer/CenterContainer/VBoxContainer")
+chcswin = NodePath("HBoxContainer2/MarginContainer")
+ind = NodePath("HBoxContainer2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer2/TextureRect")
+
+[node name="Timer" type="Timer" parent="UI/dbshechkka"]
+wait_time = 0.05
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/dbshechkka"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -220.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/dbshechkka/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="UI/dbshechkka/HBoxContainer2/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_qr8ic")
+region_rect = Rect2(0, 0, 160, 164)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 15
+
+[node name="CenterContainer" type="MarginContainer" parent="UI/dbshechkka/HBoxContainer2/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/dbshechkka/HBoxContainer2/MarginContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="MarginContainer" parent="UI/dbshechkka/HBoxContainer2"]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="UI/dbshechkka/HBoxContainer2/PanelContainer"]
+layout_mode = 2
+texture = ExtResource("5_qr8ic")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 16
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/dbshechkka/HBoxContainer2/PanelContainer"]
+custom_minimum_size = Vector2(800, 220)
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/dbshechkka/HBoxContainer2/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/dbshechkka/HBoxContainer2/PanelContainer/MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/dbshechkka/HBoxContainer2/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="UI/dbshechkka/HBoxContainer2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_y4gt4")
+theme_override_font_sizes/font_size = 32
+text = "Text"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/dbshechkka/HBoxContainer2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("6_y4gt4")
+theme_override_font_sizes/normal_font_size = 16
+text = "MORE Text"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="UI/dbshechkka/HBoxContainer2/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(33, 0)
+layout_mode = 2
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/dbshechkka/HBoxContainer2/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(33, 0)
+layout_mode = 2
+texture = ExtResource("7_thhpf")
+stretch_mode = 2
+
+[node name="HBoxContainer" type="VBoxContainer" parent="UI/dbshechkka"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -232.0
+offset_top = -472.0
+offset_right = 568.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 2
+
+[node name="command_processor" type="Node" parent="."]
+script = ExtResource("6_0yhcs")

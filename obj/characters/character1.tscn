@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://mf84lbf4ti0k"]
+
+[ext_resource type="Texture2D" uid="uid://mg3tglcmurvh" path="res://img/monochrome-transparent_packed.png" id="1_kcov0"]
+[ext_resource type="Script" uid="uid://cehosf34j3w23" path="res://obj/characters/character_1.gd" id="1_qs7vs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qs7vs"]
+
+[node name="character" type="StaticBody2D"]
+script = ExtResource("1_qs7vs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kcov0")
+centered = false
+region_enabled = true
+region_rect = Rect2(464, 48, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_qs7vs")

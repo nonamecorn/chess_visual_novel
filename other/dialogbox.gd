@@ -10,7 +10,7 @@ extends Control
 @onready var cname = get_node(cnm)
 @onready var choices = get_node(chcs)
 @onready var chcswindow = get_node(chcswin)
-@onready var cp = preload("res://other/cpnew.tres")
+@onready var cp = CommandProcessor
 @export var textSpeed = 0.05
 var finished = false
 var link = preload("res://other/lbtn.tscn")
@@ -48,9 +48,8 @@ var test_dialog = {
 
 func _ready():
 	rng.randomize()
-	visible = false
 	$Timer.wait_time = textSpeed
-	innit(test_dialog)
+	#innit(test_dialog)
 
 
 #func _process(_delta):
@@ -64,7 +63,6 @@ func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		if opt:
 			choices.get_children()[select].onprst()
-			print("what")
 	if event.is_action_pressed("ui_left_mouse") or event.is_action_pressed("ui_accept"):
 		if !finished:
 			text.visible_characters = len(text.text)
@@ -107,8 +105,11 @@ func setup(dilstart):
 	
 	if "sound" in data:
 		ostmanager.playsound(data.sound)
-	
-	$Texture.texture = load("res://img/characters/" + data.texture)
+	if "texture" in data:
+		$Texture.show()
+		$Texture.texture = load("res://img/characters/" + data.texture)
+	else:
+		$Texture.hide()
 	
 	text.bbcode_text = data.txt
 	cname.text = data.name

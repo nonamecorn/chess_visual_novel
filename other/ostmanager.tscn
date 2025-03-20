@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dbpcjgk6c8myv"]
 
-[ext_resource type="Script" path="res://other/ostmanager.gd" id="1_t3ojh"]
+[ext_resource type="Script" uid="uid://iij08n4swdw6" path="res://other/ostmanager.gd" id="1_t3ojh"]
 
 [node name="ostmanager" type="Node"]
 script = ExtResource("1_t3ojh")

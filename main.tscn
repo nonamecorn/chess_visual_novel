@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7pfxmsjqrx8j"]
+[gd_scene load_steps=3 format=3 uid="uid://b7pfxmsjqrx8j"]
 
 [ext_resource type="PackedScene" uid="uid://bosi66ecuj1sn" path="res://other/dialogbox.tscn" id="1_t6c8p"]
 [ext_resource type="PackedScene" uid="uid://xujwxqb61kx" path="res://other/ingamemenu.tscn" id="2_mp0fq"]
-[ext_resource type="PackedScene" uid="uid://d0qyk6v20uief" path="res://chess_stuff/board.tscn" id="3_jic2r"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -22,11 +21,6 @@ offset_bottom = -37.0
 [node name="HBoxContainer" parent="dbshechkka" index="4"]
 offset_top = -473.0
 offset_bottom = -4.0
-
-[node name="Board" parent="." instance=ExtResource("3_jic2r")]
-layout_mode = 1
-offset_right = 0.0
-offset_bottom = 0.0
 
 [node name="menu" parent="." instance=ExtResource("2_mp0fq")]
 process_mode = 3

@@ -47,7 +47,3 @@ func starttrack(trackname,pause):
 
 
 	
-
-
-
-
