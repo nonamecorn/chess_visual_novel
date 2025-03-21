@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cs1uatrp5346i"]
 
-[ext_resource type="Script" uid="uid://bw56fhh448ie6" path="res://other/lbtn.gd" id="1_35xyq"]
+[ext_resource type="Script" uid="uid://bw56fhh448ie6" path="res://ui/lbtn.gd" id="1_35xyq"]
 [ext_resource type="FontFile" uid="uid://dewetsiqnf60o" path="res://other/PressStart2P-Regular.ttf" id="1_te1jr"]
 
 [node name="btn" type="HBoxContainer"]

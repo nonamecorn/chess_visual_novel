@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://bal1y1cjny7n8"]
 
-[ext_resource type="Script" uid="uid://d0cpolfjnrbsg" path="res://other/battle_system.gd" id="1_7spd1"]
-[ext_resource type="Script" uid="uid://c62b1ou8qkcek" path="res://other/dialogbox.gd" id="2_ttkgs"]
+[ext_resource type="Script" uid="uid://d0cpolfjnrbsg" path="res://other/battle_system/battle_system.gd" id="1_7spd1"]
+[ext_resource type="Script" uid="uid://c62b1ou8qkcek" path="res://ui/dialogbox.gd" id="2_ttkgs"]
 [ext_resource type="Texture2D" uid="uid://dqe17hk8fqung" path="res://img/ui.png" id="5_qr8ic"]
-[ext_resource type="Script" uid="uid://q186dbxfotc" path="res://other/command_processor.gd" id="6_0yhcs"]
+[ext_resource type="Script" uid="uid://q186dbxfotc" path="res://other/battle_system/command_processor.gd" id="6_0yhcs"]
 [ext_resource type="FontFile" uid="uid://dewetsiqnf60o" path="res://other/PressStart2P-Regular.ttf" id="6_y4gt4"]
 [ext_resource type="Texture2D" uid="uid://dagl3jkqflf1u" path="res://img/uishish.png" id="7_thhpf"]
 

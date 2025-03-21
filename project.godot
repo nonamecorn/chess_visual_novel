@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 autoload="*res://other/autoload.tscn"
 ostmanager="*res://other/ostmanager.tscn"
-CommandProcessor="*res://other/command_processor.tscn"
+CommandProcessor="*res://other/battle_system/command_processor.tscn"
 
 [editor_plugins]
 

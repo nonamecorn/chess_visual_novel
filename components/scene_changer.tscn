@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dinytxfsx2hul"]
 
-[ext_resource type="Script" uid="uid://dnt5ji1frwg7l" path="res://other/scene_changer.gd" id="1_t5yip"]
+[ext_resource type="Script" uid="uid://dnt5ji1frwg7l" path="res://components/scene_changer.gd" id="1_t5yip"]
 
 [sub_resource type="Gradient" id="Gradient_rhfbe"]
 

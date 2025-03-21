@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cd2wce5opn2fy" path="res://obj/player.gd" id="1_g3svd"]
 [ext_resource type="Texture2D" uid="uid://mg3tglcmurvh" path="res://img/monochrome-transparent_packed.png" id="1_x4w5f"]
-[ext_resource type="PackedScene" uid="uid://bosi66ecuj1sn" path="res://other/dialogbox.tscn" id="3_rhfbe"]
-[ext_resource type="PackedScene" uid="uid://dinytxfsx2hul" path="res://other/scene_changer.tscn" id="4_xnc2w"]
+[ext_resource type="PackedScene" uid="uid://bosi66ecuj1sn" path="res://ui/dialogbox.tscn" id="3_rhfbe"]
+[ext_resource type="PackedScene" uid="uid://dinytxfsx2hul" path="res://components/scene_changer.tscn" id="4_xnc2w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x4w5f"]
 
